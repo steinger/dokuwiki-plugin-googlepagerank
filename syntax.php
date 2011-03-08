@@ -50,6 +50,7 @@ class syntax_plugin_googlepagerank extends DokuWiki_Syntax_Plugin {
         if($mode == 'xhtml'){
             if (!preg_match('/^(http:\/\/)?([^\/]+)/i', $data[0])) { $data[0]='http://'.$data[0]; }
             $pr=$this->getpr($data[0]);
+            if ($pr == '') {$pr = 0;}
             $pagerank="PageRank: $pr/10";
             //The (old) image method
             if ($data[2] == 'image') {
