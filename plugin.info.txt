@@ -1,7 +1,7 @@
 base    googlepagerank
 author  Marcel Steinger
 email   sourcecode@steinger.ch
-date    2011-02-21
+date    2011-11-20
 name    Google PageRank Plugin
 desc    The Google PageRank is a scoring system created by Google to give websites a rank. Generally, the more popular your website is, the higher your pagerank is.
 url     http://www.dokuwiki.org/plugin:googlepagerank

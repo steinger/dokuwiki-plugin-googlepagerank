@@ -150,7 +150,7 @@ class syntax_plugin_googlepagerank extends DokuWiki_Syntax_Plugin {
         $ch = $this->getch($url);
         $fp = fsockopen($this->googlehost, 80, $errno, $errstr, 30);
         if ($fp) {
-           $out = "GET /search?client=navclient-auto&ch=$ch&features=Rank&q=info:$url HTTP/1.1\r\n";
+           $out = "GET /tbr?client=navclient-auto&ch=$ch&features=Rank&q=info:$url HTTP/1.1\r\n";
            //echo "<pre>$out</pre>\n"; //debug only
            $out .= "User-Agent: $this->googleua\r\n";
            $out .= "Host: $this->googlehost\r\n";
