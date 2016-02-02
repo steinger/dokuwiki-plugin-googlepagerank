@@ -34,7 +34,7 @@ class syntax_plugin_googlepagerank extends DokuWiki_Syntax_Plugin {
     /**
           * Handle the match
           */
-    function handle($match, $state, $pos, &$handler) {
+    function handle($match, $state, $pos, Doku_Handler $handler) {
      
             $match = substr($match,11,-2);
             list($url,$width,$method) = explode(',',$match);
@@ -46,7 +46,7 @@ class syntax_plugin_googlepagerank extends DokuWiki_Syntax_Plugin {
     /**
           * Create output
           */
-    function render($mode, &$renderer, $data) {
+    function render($mode, Doku_Renderer $renderer, $data) {
         if($mode == 'xhtml'){
             if (!preg_match('/^(http:\/\/)?([^\/]+)/i', $data[0])) { $data[0]='http://'.$data[0]; }
             $pr=$this->getpr($data[0]);
